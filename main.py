@@ -9,15 +9,16 @@ Runs offline; the text is fixed in this file.
 import os
 
 ENTRY = (
-    "Day 1: pull 300 Shopify stores from Storeleads; email each a 1-page "
-    "audit (Lighthouse scores + 3 fixes). Sell the fix for $99 via "
-    "Gumroad, delivered in 24h by code. $12 domain. 2% reply, 3-5 sales "
-    "= $300-500. Edge: an agent audits 100 stores/day for ~$0; humans "
-    "charge $500+."
+    "Day 1: pull 300 Shopify stores via Storeleads; email each a 1-page "
+    "audit (Lighthouse + 3 fixes). Sell the fix for $99, delivered in "
+    "24h by code. Day 7: nudge; reinvest into 2k more leads. 2% reply, "
+    "3-5 sales = $300-500. Edge: agent audits 100/day for ~$0 vs "
+    "humans at $500+."
 )
 
 
 def main() -> None:
+    assert 1 <= len(ENTRY) <= 280, f"entry is {len(ENTRY)} code points"
     out_dir = os.environ.get("OUTPUT_DIR", "/output")
     os.makedirs(out_dir, exist_ok=True)
     path = os.path.join(out_dir, "entry.txt")

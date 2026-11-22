@@ -14,7 +14,7 @@ The plan: on day one, pull 300 Shopify stores from Storeleads and email each a f
 python3 main.py
 ```
 
-It writes the plan to `/output/entry.txt` (UTF-8, 275 characters).
+It writes the plan to `/output/entry.txt` (UTF-8, 274 characters, verified by running `main.py` — the program asserts the 1–280 character limit before writing).
 
 ## License
 
